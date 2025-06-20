@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Widget – Card Style + Cities</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="intro">
+    <h1>Weather Forecast</h1>
+    <p>Choose the location to view detailed weather information!</p>
+    <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+      🌙
+    </button>
+  </div>
+
+  <main class="widget">
+    <!-- City Selector -->
+    <div class="city-selector">
+      <select id="citySelect">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+    </div>
+
+    <header class="widget-header">
+      <h2 id="cityName">🇨🇦 Calgary</h2>
+      <button id="unitToggle" class="toggle" disabled>°F</button>
+    </header>
+
+    <!-- main card -->
+    <section id="mainCard" class="main-card loading">
+      Loading forecast...
+    </section>
+
+    <!-- 7days weather little icon -->
+    <ul id="miniGrid" class="mini-grid"></ul>
+
+    <p id="status" class="loading" style="display: none;">Loading forecast…</p>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
